@@ -1,5 +1,10 @@
+node_modules
+dist
 *.log
 .DS_Store
 vault/
 test-results/
 .agentia-*-pending.json
+demo/
+coverage/
+*.tgz
