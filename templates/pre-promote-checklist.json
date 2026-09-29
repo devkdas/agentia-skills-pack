@@ -1,0 +1,13 @@
+{
+  "name": "pre-promote-checklist",
+  "version": 1,
+  "gates": [
+    {"id": "auth-cicd", "command": "agentia auth get --json", "expect": "cicd set true"},
+    {"id": "auth-crt", "command": "agentia auth get --crt --json", "expect": "ready true"},
+    {"id": "story-context", "command": "agentia cicd work get <story-id> --json", "expect": "story exists and is assigned"},
+    {"id": "policy-gate", "command": "agentia gov check --story <story-id> --env <target> --json", "expect": "status pass or warn"},
+    {"id": "data-snapshot", "command": "agentia vault snapshot --template <name> --credential-id <id> --story <story-id>", "expect": "snapshot file captured"},
+    {"id": "prod-approval", "command": "agentia gov approve <code> --story <story-id> --env PROD", "expect": "required only for PROD targets"},
+    {"id": "tests-green", "command": "agentia test auto --job <id> --project <id> --json", "expect": "terminal status succeeded"}
+  ]
+}

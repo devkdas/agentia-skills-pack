@@ -1,0 +1,5 @@
+*.log
+.DS_Store
+vault/
+test-results/
+.agentia-*-pending.json
