@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agentia 0.122](https://img.shields.io/badge/agentia-0.122.0--alpha.1-blue.svg)](https://developer.copado.com/docs)
-[![Skills 9](https://img.shields.io/badge/skills-9-blue.svg)](#skill-catalog)
+[![Skills 10](https://img.shields.io/badge/skills-10-blue.svg)](#skill-catalog)
 
 **Skills Pack** standardizes how humans and agents deliver together. Eight
 portable Agent Skills plus a nine rule guardrails file plus reusable team
@@ -45,9 +45,9 @@ standard. Inconsistent agent usage means inconsistent delivery quality.
 
 ## Features
 
-- **Nine skills** — governed releases, test triage, full story delivery,
+- **Ten skills** — governed releases, test triage, full story delivery,
   onboarding, data safety, multi agent handoffs, sprint cycles, agent
-  routing and story narration.
+  routing, story narration and autonomous sprints.
 - **Exact command sequences** — every step names the real command with
   flags, never pseudocode.
 - **Output parsing rules** — what each status means and what the agent
@@ -125,6 +125,7 @@ The repeatability proof, run twice on camera with identical steps:
 | `sprint` | Plan to docs 12 step cycle | All five specialist agents |
 | `router` | Request to agent mapping | Routing table plus triage shortcuts |
 | `narrator` | Story docs from diffs | `git diff`, release ask, `work update` |
+| `autonomous-sprint` | Zero human loop except PROD gate | Full chain with halt conditions |
 
 ## Templates
 
@@ -188,7 +189,8 @@ skills-pack/
 │   ├── handoff/SKILL.md
 │   ├── sprint/SKILL.md
 │   ├── router/SKILL.md
-│   └── narrator/SKILL.md
+│   ├── narrator/SKILL.md
+│   └── autonomous-sprint/SKILL.md
 ├── templates/
 │   ├── story-template.md
 │   ├── data-template-standards.md
